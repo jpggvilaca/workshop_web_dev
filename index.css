@@ -1,0 +1,99 @@
+/* General rules */
+* {
+  box-sizing: border-box;
+}
+
+body,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Main wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title section */
+.title {
+  text-align: center;
+  background: grey;
+  color: #fff;
+  padding: 40px;
+}
+
+.title p {
+  font-size: 36px;
+}
+
+/* Image section */
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: #fff;
+}
+
+.image {
+  border-radius: 50%;
+  background-image: url('./img.jpeg');
+  background-size: 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 160px;
+}
+
+/* About section */
+.about {
+  background: grey;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.about ul:nth-child(2) {
+  margin: 0 40px;
+}
+
+/* Contact section */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+}
+
+.contact a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .about {
+    padding: 20px;
+  }
+
+  .contact {
+    padding: 20px;
+  }
+
+  .title p {
+    font-size: 10px;
+  }
+}
+
+/* Javascript related stuff */
+#truth {
+  display: none;
+}
