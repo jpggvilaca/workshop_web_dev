@@ -27,11 +27,22 @@
 
 var lists = document.querySelectorAll('ul');
 var button = document.querySelector('button');
+var wasClicked = false;
 
 button.addEventListener('click', function() {
-  lists[0].style.display = "none";
-  lists[1].style.display = "none";
-  lists[2].style.display = "block";
+  if (!wasClicked) {
+    lists[0].style.display = "none";
+    lists[1].style.display = "none";
+    lists[2].style.display = "block";
+
+    wasClicked = true;
+  } else {
+    lists[0].style.display = "block";
+    lists[1].style.display = "block";
+    lists[2].style.display = "none";
+
+    wasClicked = false;
+  }
 });
 
 console.log(lists[0]);
